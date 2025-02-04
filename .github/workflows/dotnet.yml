@@ -30,7 +30,7 @@ jobs:
       run: dotnet publish -c Release -r osx-arm64 -p:PublishSingleFile=true --self-contained true -o ./out-osx
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        repo_token: "${{ secrets.TOKEN }}"
         automatic_release_tag: "1.0.${{github.run_number}}"
         title: "1.0.${{github.run_number}}"
         prerelease: false
